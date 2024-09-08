@@ -1,5 +1,8 @@
 body {
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -7,14 +10,16 @@ body {
 #container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 16px 16px;
+    padding: 200px 200px;
+    width: 256px;
 }
 
 .square-div {
-    border: solid 1px;
-    width: 25px;
-    height: 25px;
-    color: aqua;
+    border: 1px solid cyan;
+    width: 16px;
+    height: 16px;
+    box-sizing: border-box;
+    
 }
+
+

@@ -1,10 +1,24 @@
+/* A project, is a collection of problems; right?
+/ And you've gotta solve at least ONE programming problem daily; right?
+Dissect shit, it'll make your life easier. */
+
 const container = document.querySelector('#container');
 
-for (let i = 0; i < 282 * 20; i++) {
+
+
+for (let i = 0; i < 256; i++) {
     let newDiv = document.createElement('div');
-    newDiv.classList.add("square-div");
-    container.appendChild(newDiv);
+    newDiv.classList.add('square-div');
+    container.append(newDiv);
 }
 
-// I feel like 25px to 25px sizes are good for boxes for etch a sketch style
-// project but I've gotta find a way to fit these boxes in a screen
+const squareDivs = document.querySelectorAll('.square-div');
+
+squareDivs.forEach(changeColor);
+
+function changeColor(square) {
+    square.addEventListener('mouseover', () => {
+        square.style.backgroundColor = "red";
+    })
+}
+// 16 different containers within one container?
