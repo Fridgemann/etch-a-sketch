@@ -6,7 +6,7 @@ const container = document.querySelector('#container');
 
 
 
-for (let i = 0; i < 256; i++) {
+for (let i = 0; i < 625; i++) {
     let newDiv = document.createElement('div');
     newDiv.classList.add('square-div');
     container.append(newDiv);
@@ -21,4 +21,7 @@ function changeColor(square) {
         square.style.backgroundColor = "red";
     })
 }
-// 16 different containers within one container?
+
+
+// To change the size of the grid; 
+// change the i in the loop, width of the container and square-div width and height
