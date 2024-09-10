@@ -3,6 +3,7 @@
 Dissect shit, it'll make your life easier. */
 
 const container = document.querySelector('#container');
+const resizeBtn = document.querySelector('#resizeBtn');
 
 
 createGrid(16);
@@ -30,6 +31,18 @@ function createGrid(size) {
     }
 }
 
+resizeBtn.addEventListener('click', () => {
+    let gridSize = Number(prompt("Enter grid size (e.g. 16 for a 16x16 grid)"));
+    if (gridSize > 100) {
+        alert("Grids of size 100x100 and higher would be way too hard on the computer.")
+    }
+    else {
+        while (container.firstChild) {
+            container.removeChild(container.lastChild);
+        }
+        createGrid(gridSize);
+    }
+})
 
 
 // To change the size of the grid; 
