@@ -5,12 +5,8 @@ Dissect shit, it'll make your life easier. */
 const container = document.querySelector('#container');
 
 
+createGrid(16);
 
-for (let i = 0; i < 625; i++) {
-    let newDiv = document.createElement('div');
-    newDiv.classList.add('square-div');
-    container.append(newDiv);
-}
 
 const squareDivs = document.querySelectorAll('.square-div');
 
@@ -21,6 +17,19 @@ function changeColor(square) {
         square.style.backgroundColor = "red";
     })
 }
+
+function createGrid(size) {
+    let squareDims = `${size}px`;
+    let gridWidth = `${size * size}px`;
+    for (let i = 0; i < size * size; i++) {
+        let newDiv = document.createElement('div');
+        newDiv.classList.toggle('square-div');
+        newDiv.style.cssText = `width: ${squareDims}; height: ${squareDims}`;
+        container.style.width = gridWidth;
+        container.append(newDiv);
+    }
+}
+
 
 
 // To change the size of the grid; 

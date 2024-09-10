@@ -11,13 +11,10 @@ body {
     display: flex;
     flex-wrap: wrap;
     padding: 200px 200px;
-    width: 625px;
 }
 
 .square-div {
     border: 1px solid cyan;
-    width: 25px;
-    height: 25px;
     box-sizing: border-box;
     
 }
