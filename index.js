@@ -5,13 +5,7 @@ Dissect shit, it'll make your life easier. */
 const container = document.querySelector('#container');
 const resizeBtn = document.querySelector('#resizeBtn');
 
-
 createGrid(16);
-
-
-const squareDivs = document.querySelectorAll('.square-div');
-
-squareDivs.forEach(changeColor);
 
 function changeColor(square) {
     square.addEventListener('mouseover', () => {
@@ -29,6 +23,9 @@ function createGrid(size) {
         container.style.width = gridWidth;
         container.append(newDiv);
     }
+    const squareDivs = document.querySelectorAll('.square-div');
+
+    squareDivs.forEach(changeColor);
 }
 
 resizeBtn.addEventListener('click', () => {
