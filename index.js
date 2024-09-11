@@ -1,7 +1,3 @@
-/* A project, is a collection of problems; right?
-/ And you've gotta solve at least ONE programming problem daily; right?
-Dissect shit, it'll make your life easier. */
-
 const container = document.querySelector('#container');
 const resizeBtn = document.querySelector('#resizeBtn');
 
